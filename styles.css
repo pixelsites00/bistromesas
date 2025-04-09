@@ -21,7 +21,8 @@
     flex-wrap: wrap;
   }
   .logo-topo {
-    height: 70px;
+    height: 100px;
+    max-width: 300px;
   }
   .menu-toggle {
     background: none;
@@ -30,6 +31,7 @@
     color: white;
     display: none;
     cursor: pointer;
+    margin-left: auto; /* move o botão para o lado direito */
   }
   nav ul {
     display: flex;
@@ -62,7 +64,7 @@
       display: flex;
     }
     .logo-topo {
-      height: 50px;
+      height: 80px;
     }
   }
   
@@ -74,8 +76,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 16 / 7;
     position: relative;
+    padding: 20px 0;
   }
   .slides-auto {
     display: flex;
@@ -90,10 +92,10 @@
     align-items: center;
   }
   .slide img {
-    max-width: 90%;
-    max-height: 90%;
+    width: 100%;
+    height: auto;
+    max-height: 500px;
     object-fit: contain;
-    padding: 10px;
     border-radius: 10px;
   }
   
@@ -213,7 +215,7 @@
     font-weight: bold;
     margin: 5px 0 10px;
   }
-/* AVALIAÇÕES */
+  /* AVALIAÇÕES */
 .avaliacoes {
     background: #fff5eb;
     padding: 60px 5%;
@@ -352,10 +354,14 @@
     }
   
     .logo-topo {
-      height: 50px;
+      height: 80px;
     }
   
-    
+    .slides-auto img {
+      height: auto;
+      aspect-ratio: 16 / 9;
+    }
+  
     .galeria-scroll {
       gap: 12px;
     }
@@ -368,4 +374,4 @@
       width: 100%;
     }
   }
-    
+  
