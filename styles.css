@@ -1,0 +1,371 @@
+/* RESET E BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #fcf9f5;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* TOPO */
+  .topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #3e1e00;
+    flex-wrap: wrap;
+  }
+  .logo-topo {
+    height: 70px;
+  }
+  .menu-toggle {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    display: none;
+    cursor: pointer;
+  }
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  nav ul li a:hover {
+    color: #ffcc00;
+  }
+  
+  /* MENU MOBILE */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+    nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #3e1e00;
+      margin-top: 10px;
+    }
+    nav ul.active {
+      display: flex;
+    }
+    .logo-topo {
+      height: 50px;
+    }
+  }
+  
+  /* CARROSSEL BANNER */
+  .carrossel-auto {
+    width: 100%;
+    overflow: hidden;
+    background-color: #fffdf8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 16 / 7;
+    position: relative;
+  }
+  .slides-auto {
+    display: flex;
+    width: 400%;
+    transition: transform 0.5s ease-in-out;
+  }
+  .slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slide img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  /* SEÇÕES GERAIS */
+  section {
+    padding: 50px 5%;
+    text-align: center;
+  }
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #3e1e00;
+    text-transform: uppercase;
+  }
+  
+  /* PRODUTOS E GALERIA */
+  .galeria-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px;
+  }
+  .galeria-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  .item {
+    flex: 0 0 auto;
+    width: 230px;
+    scroll-snap-align: start;
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+  }
+  .item:hover {
+    transform: scale(1.05);
+  }
+  .item img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .nome-produto {
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  .descricao-produto {
+    font-size: 14px;
+    color: #666;
+  }
+  .preco-produto {
+    color: #d40000;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  .botao-whats {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  .botao-whats:hover {
+    background-color: #1ebd5a;
+  }
+  
+  /* PROMOÇÕES */
+  .promocoes {
+    background-color: #fff7f0;
+    padding: 60px 5%;
+  }
+  .promocoes h2 {
+    color: #3e1e00;
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  .promocoes-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  .promo-item {
+    background: #fff;
+    border: 1px solid #ffdca8;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  .promo-item:hover {
+    transform: translateY(-5px);
+  }
+  .promo-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  .preco-antigo {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 14px;
+  }
+  .preco-novo {
+    color: #d40000;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0 10px;
+  }
+/* AVALIAÇÕES */
+.avaliacoes {
+    background: #fff5eb;
+    padding: 60px 5%;
+    text-align: center;
+  }
+  .avaliacoes h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #3e1e00;
+  }
+  .avaliacoes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+  }
+  .avaliacao {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  .foto-cliente {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  .estrelas {
+    color: #ffc107;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .depoimento {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  /* SOBRE */
+  .sobre {
+    background-color: #fffaf3;
+    padding: 60px 5%;
+    text-align: center;
+  }
+  .sobre p {
+    max-width: 800px;
+    margin: 15px auto;
+    font-size: 16px;
+    color: #444;
+  }
+  
+  /* CONTATO */
+  .contato {
+    background: #fff5e6;
+    padding: 60px 5%;
+    text-align: center;
+  }
+  .contato p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 16px;
+    color: #555;
+  }
+  form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  form input,
+  form textarea {
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+  }
+  form textarea {
+    resize: vertical;
+  }
+  form button {
+    background: #3e1e00;
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  form button:hover {
+    background: #ffcc66;
+  }
+  
+  /* RODAPÉ */
+  footer {
+    background: #2b1400;
+    color: white;
+    text-align: center;
+    padding: 30px 5%;
+    font-size: 14px;
+  }
+  
+  /* BOTÃO WHATSAPP FIXO */
+  .botao-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: transform 0.3s;
+  }
+  .botao-whatsapp:hover {
+    transform: scale(1.1);
+  }
+  
+  /* AJUSTES RESPONSIVOS */
+  @media (max-width: 768px) {
+    .topo {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .logo-topo {
+      height: 50px;
+    }
+  
+    
+    .galeria-scroll {
+      gap: 12px;
+    }
+  
+    .item {
+      width: 180px;
+    }
+  
+    .promo-item {
+      width: 100%;
+    }
+  }
+    
